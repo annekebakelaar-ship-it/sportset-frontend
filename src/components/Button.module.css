@@ -1,0 +1,35 @@
+.button {
+  background: none;
+  border: none;
+  padding: 0 0 2px;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  position: relative;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-text);
+  transition: width var(--transition-fast);
+}
+
+.button:hover::after {
+  width: 100%;
+}
+
+.button:disabled {
+  color: var(--color-placeholder);
+  cursor: default;
+}
+
+.button:disabled::after {
+  display: none;
+}
