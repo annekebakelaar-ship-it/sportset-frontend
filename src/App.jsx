@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
+import TestPage from './pages/TestPage'
 import SignIn from './pages/auth/SignIn'
 import GoalStep from './pages/onboarding/GoalStep'
 import ProfileStep from './pages/onboarding/ProfileStep'
@@ -33,8 +34,8 @@ import Connect from './pages/connect/Connect'
 export default function App() {
   return (
     <Routes>
-      {/* Default: dashboard (met Scanner-CTA) */}
-      <Route path="/" element={<Layout showNav><Dashboard /></Layout>} />
+      {/* Test page */}
+      <Route path="/" element={<TestPage />} />
       <Route path="/dashboard" element={<Navigate to="/" replace />} />
 
       {/* Scanner — hoofdfunctionaliteit */}
