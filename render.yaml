@@ -1,0 +1,4 @@
+# Frontend Build Config
+name: sportset-frontend
+publish_directory: dist
+build_command: rm -rf node_modules dist && npm install && npm run build
